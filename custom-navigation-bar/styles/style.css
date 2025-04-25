@@ -1,0 +1,28 @@
+@import "/custom-navigation-bar/styles/toggle.css";
+@import "/custom-navigation-bar/styles/dropdown.css";
+
+:root {
+  --bg-light: #ffffff;
+  --text-light: #121212;
+  --bg-dark: #121212;
+  --text-dark: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body:has(#theme-toggle:checked) {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}

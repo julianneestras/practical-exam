@@ -1,0 +1,30 @@
+.theme-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+#theme-toggle {
+  display: none;
+}
+
+.dark-icon {
+  display: inline-block;
+}
+
+.light-icon {
+  display: none;
+}
+
+#theme-toggle:checked + label .dark-icon {
+  display: none;
+}
+
+#theme-toggle:checked + label .light-icon {
+  display: inline-block;
+}
