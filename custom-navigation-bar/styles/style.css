@@ -1,28 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "/custom-navigation-bar/styles/toggle.css";
 @import "/custom-navigation-bar/styles/dropdown.css";
+@import "/custom-navigation-bar/styles/navbar.css";
+@import "/custom-navigation-bar/styles/card.css";
 
-:root {
-  --bg-light: #ffffff;
-  --text-light: #121212;
-  --bg-dark: #121212;
-  --text-dark: #ffffff;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg-light);
-  color: var(--text-light);
-  transition: background-color 0.3s, color 0.3s;
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f5f5f5;
+  color: #2b2b2b;
+  height: 2000px;
 }
 
-body:has(#theme-toggle:checked) {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
-svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+img {
+  height: 40px;
+  width: 30px;
+  margin-right: 2px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+@media (min-width: 769px) {
+  .nav-container {
+    flex-direction: row;
+  }
+
+  .menu {
+    order: 1;
+  }
+
+  .search-box {
+    order: 2;
+    margin-left: 20px;
+  }
+
+  .right-controls {
+    order: 3;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu,
+  .search-box {
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .search-box,
+  .menu-toggle:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .search-box input {
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .menu a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .right-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
 }

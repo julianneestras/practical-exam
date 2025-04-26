@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+textarea {
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f3f5; /* very soft gray */
+  min-height: 100vh;
+  padding: 2rem;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff; /* clean white */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2c3e50; /* muted dark blue-gray */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.input-todo,
+.input-container input[type="text"],
+.input-container textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d0d3d6;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-add {
+  padding: 0.75rem;
+  background-color: #556677; /* muted steel blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+  background-color: #3f4a59; /* darker muted blue */
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.todo {
+  background-color: #f7f8f9;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.3s;
+}
+
+.todo:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.todo p:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.todo p:last-child {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.todo button:first-of-type {
+  background-color: #c0392b; /* dark muted red (delete) */
+  color: white;
+}
+
+.todo button:first-of-type:hover {
+  background-color: #992d22;
+}
+
+.todo button:last-of-type {
+  background-color: #6ab04c; /* soft muted green (complete) */
+  color: white;
+}
+
+.todo button:last-of-type:hover {
+  background-color: #4e9b30;
+}
+
+.done {
+  opacity: 0.5;
+}
+
+.not-done {
+  opacity: 1;
+}
